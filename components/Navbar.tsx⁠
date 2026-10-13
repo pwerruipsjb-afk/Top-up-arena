@@ -1,0 +1,21 @@
+import Link from 'next/link';
+
+export default function Navbar() {
+  return (
+    <nav className="bg-[#121218]/90 backdrop-blur border-b border-purple-900/30 sticky top-0 z-50 px-4 py-3">
+      <div className="container mx-auto flex justify-between items-center">
+        <Link href="/" className="text-xl font-black text-white tracking-wider flex items-center gap-2">
+          <span className="bg-purple-600 text-black px-2 py-0.5 rounded font-extrabold text-sm">TOPUP</span>
+          <span className="neon-text text-purple-400">ARENA</span>
+        </Link>
+        <div className="flex gap-4 text-xs font-medium">
+          <Link href="/" className="hover:text-purple-400 transition py-1">หน้าแรก</Link>
+          <Link href="/orders/check" className="hover:text-purple-400 transition py-1">เช็คสถานะ</Link>
+          <Link href="/admin" className="bg-purple-900/40 text-purple-300 border border-purple-600/50 px-3 py-1 rounded hover:bg-purple-800/50 transition">
+            Admin
+          </Link>
+        </div>
+      </div>
+    </nav>
+  );
+}
